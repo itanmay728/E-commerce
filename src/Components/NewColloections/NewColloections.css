@@ -1,0 +1,67 @@
+.new-colloections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    height: auto;
+}
+
+.new-colloections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.new-colloections hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ✅ 4 columns for large screens */
+    margin-top: 50px;
+    gap: 30px;
+
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+    .new-colloections h1 {
+        font-size: 40px;
+    }
+    .collections {
+        grid-template-columns: repeat(3, 1fr); /* ✅ 3 columns for tablets */
+        gap: 20px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .new-colloections h1 {
+        font-size: 32px;
+    }
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns for mobile */
+        gap: 15px;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+    .new-colloections h1 {
+        font-size: 26px;
+    }
+    .new-colloections hr {
+        width: 150px;
+        height: 4px;
+    }
+    .collections {
+        grid-template-columns: 1fr; /* ✅ Single column for very small screens */
+        gap: 10px;
+    }
+}
