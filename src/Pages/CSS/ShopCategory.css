@@ -1,0 +1,119 @@
+/* ===== Shop Category Banner ===== */
+.shopcategory-banner {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ===== Index + Sort Section ===== */
+.shopcategory-indexSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.shopcategory-indexSort p span {
+  font-weight: 600;
+}
+
+.shopcategory-sort {
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid #888;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.shopcategory-sort:hover {
+  background: #f5f5f5;
+}
+
+/* ===== Product Grid ===== */
+.shopcategory-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+
+.shopcategory-loadmore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px auto;
+  width: 233px;
+  height: 69px;
+  border-radius: 75px;
+  background: #ededed;
+  color: #787878;
+  font-size: 18px;
+  font-weight: 500px;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .shopcategory-products {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .shopcategory-indexSort {
+    flex-direction: column;
+    align-items: center;   /* ✅ center horizontally */
+    text-align: center;    /* ✅ center text inside <p> */
+    gap: 12px;
+  }
+
+  .shopcategory-indexSort p {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .shopcategory-sort {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .shopcategory-products {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 18px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .shopcategory-banner {
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  .shopcategory-products {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .shopcategory-sort {
+    padding: 8px 0px;
+    font-size: 14px;
+  }
+}

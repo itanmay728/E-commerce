@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       {/* Logo */}
-      <div className="nav-logo">
+      <div onClick={()=> handleMenuClick("shop")} className="nav-logo">
         <Link className="nav-logo-link" to="/">
           <img src={logo} alt="Logo" />
           <p>Shopping</p>
