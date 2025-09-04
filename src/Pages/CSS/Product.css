@@ -1,0 +1,27 @@
+.product-page {
+  max-width: 1200px;   /* consistent width */
+  margin: 0 auto;      /* center on screen */
+  padding: 20px;       /* spacing inside */
+
+  display: flex;
+  flex-direction: column;
+  gap: 60px;              /* spacing between sections */
+  padding: 0 170px; 
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .product-page {
+    padding: 0 60px;
+    gap: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .product-page {
+    padding: 0 20px;
+    gap: 30px;
+  }
+}

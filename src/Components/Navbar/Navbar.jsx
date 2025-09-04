@@ -21,16 +21,11 @@ const Navbar = () => {
   return (
     <div className="navbar">
       {/* Logo */}
-      <div onClick={()=> handleMenuClick("shop")} className="nav-logo">
+      <div onClick={() => handleMenuClick("shop")} className="nav-logo">
         <Link className="nav-logo-link" to="/">
           <img src={logo} alt="Logo" />
           <p>Shopping</p>
         </Link>
-      </div>
-
-      {/* Mobile Menu Icon */}
-      <div className="mobile-menu-icon" onClick={handleToggleMenu}>
-        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
       {/* Navigation Menu */}
@@ -53,15 +48,22 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Login & Cart */}
-      <div className="nav-login-cart">
-        <Link to="/login">
-          <button>Login</button>
-        </Link>
-        <Link to="/cart">
-          <img src={cart_icon} alt="Cart" />
-        </Link>
-        <div className="nav-cart-count">0</div>
+      <div className="right-side">
+        {/* Login & Cart */}
+        <div className="nav-login-cart">
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
+          <Link to="/cart">
+            <img src={cart_icon} alt="Cart" />
+          </Link>
+          <div className="nav-cart-count">0</div>
+        </div>
+
+        {/* Mobile Menu Icon */}
+        <div className="mobile-menu-icon" onClick={handleToggleMenu}>
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </div>
       </div>
     </div>
   );
