@@ -4,6 +4,9 @@ import footer_logo from '../assets/logo_big.png'
 import instagram_icon from '../assets/instagram_icon.png'
 import pintester_icon from '../assets/pintester_icon.png'
 import whatsapp_icon from '../assets/whatsapp_icon.png'
+import linkedin_icon from '../assets/linkedin.png'
+import github_icon from '../assets/github.png'
+import email_icon from '../assets/email.png'
 const Footer = () => {
   return (
     <div className='footer'>
@@ -24,10 +27,20 @@ const Footer = () => {
                 <img src={instagram_icon} alt="" />
             </div>
             <div className="footer-icons-container">
-                <img src={pintester_icon} alt="" />
+                <a href="https://github.com/itanmay728" target='_blank'>
+                <img src={github_icon} alt="" />
+                </a>
+                
             </div>
             <div className="footer-icons-container">
-                <img src={whatsapp_icon} alt="" />
+                <a href="https://www.linkedin.com/in/myselftanmay/" target='_blank'>
+                <img src={linkedin_icon} alt="" />
+                </a>
+            </div>
+            <div className="footer-icons-container">
+                <a href="mailto:ktanmay1130@gmail.com">
+                    <img src={email_icon} alt="" />
+                </a>
             </div>
         </div>
 

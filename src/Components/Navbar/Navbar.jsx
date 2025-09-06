@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import logo from "../assets/logo.png";
 import cart_icon from "../assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa"; // hamburger icons
+import { ShopContext } from "../../Context/ShopContex";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const {getTotalCartItems} = useContext(ShopContext);
   const handleToggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -52,12 +54,12 @@ const Navbar = () => {
         {/* Login & Cart */}
         <div className="nav-login-cart">
           <Link to="/login">
-            <button>Login</button>
+            <button onClick={() => handleMenuClick("")}>Login</button>
           </Link>
           <Link to="/cart">
-            <img src={cart_icon} alt="Cart" />
+            <img onClick={() => handleMenuClick("")} src={cart_icon} alt="Cart" />
           </Link>
-          <div className="nav-cart-count">0</div>
+          <div className="nav-cart-count">{getTotalCartItems()}</div>
         </div>
 
         {/* Mobile Menu Icon */}

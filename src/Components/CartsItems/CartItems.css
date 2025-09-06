@@ -1,0 +1,272 @@
+/* ============== CONTAINER ============== */
+.cartitems {
+  margin: 80px auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.cartitems hr {
+  height: 3px;
+  background: #e2e2e2;
+  border: 0;
+  margin: 10px 0;
+}
+
+/* ============== HEADER ROW ============== */
+.cartitems-format-main {
+  display: grid;
+  grid-template-columns: 0.6fr 2fr 1fr 1fr 1fr 0.6fr;
+  align-items: center;
+  gap: 40px;
+  padding: 16px 0;
+  color: #454545;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ============== ITEM ROWS ============== */
+.cartitems-format {
+  display: grid;
+  grid-template-columns: 0.6fr 2fr 1fr 1fr 1fr 0.6fr;
+  align-items: center;
+  gap: 40px;
+  padding: 14px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.carticon-product-icon {
+  height: 62px;
+  width: 62px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cartitems-quantity {
+  width: 64px;
+  height: 42px;
+  border: 2px solid #ebebeb;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.cartitems-remove-icon {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* ============== TOTALS + PROMO WRAP ============== */
+.cartitems-down {
+  margin: 50px 0 0;
+  width: 100%;
+}
+
+/* ---- Totals Card ---- */
+.cartitems-total {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cartitems-total h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.cartitems-total-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 15px;
+  border-bottom: 1px dashed #eee;
+}
+.cartitems-total-item:last-of-type {
+  border-bottom: 0;
+}
+
+.cartitems-total button {
+  width: 100%;
+  height: 52px;
+  outline: none;
+  border: none;
+  background: #ff5aff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* ---- Promo Card ---- */
+.cartitems-promocode {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.cartitems-promocode p {
+  color: #555;
+  font-size: 14px;
+  margin: 0;
+}
+
+.cartitems-promobox {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.cartitems-promobox input {
+  flex: 1;
+  min-width: 0; /* <-- prevents overflow */
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.cartitems-promobox button {
+  border: none;
+  outline: none;
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ============== TABLET ============== */
+@media (max-width: 1024px) {
+  .cartitems {
+    margin: 60px auto;
+  }
+
+  .cartitems-format-main,
+  .cartitems-format {
+    grid-template-columns: 0.6fr 1.8fr 0.9fr 0.9fr 0.9fr 0.5fr;
+    gap: 24px;
+    font-size: 14px;
+  }
+
+  .carticon-product-icon {
+    height: 54px;
+    width: 54px;
+  }
+
+  .cartitems-down {
+    grid-template-columns: 1fr; /* stack totals and promo */
+  }
+
+  .cartitems-total,
+  .cartitems-promocode {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ============== MOBILE ============== */
+@media (max-width: 768px) {
+ .cartitems {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .cartitems-format-main,
+  .cartitems-format {
+    grid-template-columns: 60px 1.5fr 1fr 1fr 1fr 40px;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .carticon-product-icon {
+    height: 45px;
+  }
+
+  .cartitems-remove-icon {
+    margin: 0;
+    width: 12px;
+  }
+
+  .cartitems-quantity {
+    width: 45px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .cartitems-down {
+    margin: 30px 0 0;
+    gap: 16px;
+  }
+
+  .cartitems-total h1 {
+    font-size: 18px;
+  }
+
+  .cartitems-promobox {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .cartitems-promobox input,
+  .cartitems-promobox button {
+    width: 100%;
+    height: 42px;
+  }
+}
+
+/* ============== SMALL PHONES ============== */
+@media (max-width: 420px) {
+  .cartitems {
+    padding: 0 12px;
+  }
+
+  .cartitems-format {
+    gap: 10px 12px;
+    padding: 12px;
+  }
+
+  .carticon-product-icon {
+    height: 48px;
+    width: 48px;
+  }
+
+  .cartitems-total,
+  .cartitems-promocode {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .cartitems-total button {
+    height: 48px;
+    font-size: 15px;
+  }
+}
